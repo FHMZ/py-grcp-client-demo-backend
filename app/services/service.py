@@ -10,7 +10,7 @@ class UserService:
 
     def get_all_users(self):
         """Calls the GetUser gRPC endpoint."""
-        request = users_pb2.GetUsersRequest()  # Ensure the request type is correct
+        request = users_pb2.GetUsersRequest()
         response = self.stub.GetUsers(request)
 
         return {

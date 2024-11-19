@@ -1,0 +1,22 @@
+# Black configuration for automatic code formatting
+[tool.black]
+line-length = 88 # Sets the line length for Black
+target-version = ["py39"] # Targets Python 3.9
+exclude = '''
+/(
+    \.git
+    | \.venv
+    | __pycache__
+    | migrations
+    | .mypy_cache
+    | build
+    | dist
+)/
+'''
+
+[tool.flake8]
+max-line-length = 88
+ignore = [
+    "E203",
+    "W503",
+]

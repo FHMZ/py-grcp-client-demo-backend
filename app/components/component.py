@@ -6,7 +6,5 @@ class UserComponent:
         self.client = UserService()
 
     def get_all_users(self):
-        """Fetch and process user data."""
         user_data = self.client.get_all_users()
-        # Add any additional processing logic here
         return user_data
