@@ -7,7 +7,7 @@ services:
     ports:
       - ${API_PORT} # Maps the container's internal port to the host machine.
     volumes:
-      - ./server:/app # Mounts the local server directory to the container for live updates during development.
+      - ./server:/src # Mounts the local server directory to the container for live updates during development.
     restart: always # Automatically restarts the container if it crashes.
     depends_on: # Ensures the server starts after the database is ready.
       - db
@@ -18,7 +18,7 @@ services:
     ports:
       - ${CLIENT_PORT} # Maps the container's internal port to the host machine.
     volumes:
-      - ./client:/app # Mounts the local client directory to the container for live updates during development.
+      - ./client:/src # Mounts the local client directory to the container for live updates during development.
     restart: always # Automatically restarts the container if it crashes.
     depends_on: # Ensures the client starts after the server and database are ready.
       - server

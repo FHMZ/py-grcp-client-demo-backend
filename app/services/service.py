@@ -1,6 +1,6 @@
 import grpc
 
-from app.controllers.grpc.proto.users import users_pb2_grpc, users_pb2
+from app.controllers.grpc.proto.users import users_pb2, users_pb2_grpc
 
 
 class UserService:
